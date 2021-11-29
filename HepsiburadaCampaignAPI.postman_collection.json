@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "e104faae-1ebe-4792-8c78-4f81148f4c0f",
+		"name": "HepsiburadaCampaignAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get_product_info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44370/api/products/get_product_info/p1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44370",
+							"path": [
+								"api",
+								"products",
+								"get_product_info",
+								"p1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productCode\": \"P1\",\r\n  \"stock\": 5,\r\n  \"price\": 15\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44370/api/products/create_product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44370",
+							"path": [
+								"api",
+								"products",
+								"create_product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaign",
+			"item": [
+				{
+					"name": "create_campaign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"C1\",\r\n  \"productCode\": \"P1\",\r\n  \"duration\": 10,\r\n  \"limit\": 20,\r\n  \"targetSalesCount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44370/api/campaign/create_campaign",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44370",
+							"path": [
+								"api",
+								"campaign",
+								"create_campaign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_campaign_info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44370/api/campaign/get_campaign_info/c1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44370",
+							"path": [
+								"api",
+								"campaign",
+								"get_campaign_info",
+								"c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "increase_time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Time\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44370/api/campaign/increase_time",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44370",
+							"path": [
+								"api",
+								"campaign",
+								"increase_time"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "create_order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productCode\": \"P1\",\r\n  \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44370/api/order/create_order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44370",
+							"path": [
+								"api",
+								"order",
+								"create_order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
